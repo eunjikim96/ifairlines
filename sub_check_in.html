@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이프항공</title>
+    <!--favicon-->
+    <link rel="shortcut icon" href="index/favicon.png" sizes="32*32" type="image/png">
+    <!--font_도현체_고운돋움체-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <!--내가 작성한 css-->
+    <link rel="stylesheet" href="css/sub_reservation_style.css">
+    <!--모바일헤더 css js-->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/df17dcdd6f.js" crossorigin="anonymous"></script>
+    <!--기본js-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!--기본 달력-->
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <!--내가 작성한 js-->
+    <script src="js/main_script.js"></script>
+</head>
+
+<body>
+    <div id="header_wrap">
+        <!--header-->
+        <div class="header_aligner">
+            <!--language-->
+            <ul class="language">
+                <li><a href="javascript:return false;">한국어</a></li>
+                <li><a href="javascript:return false;">ENGLISH</a></li>
+                <li><a href="javascript:return false;">汉语</a></li>
+            </ul>
+            <!--logo-->
+            <div class="menu_wrap">
+                <h1 class="logo"><a href="index.html"><img src="index/01_header/header_logo.png" alt=""></a></h1>
+                <h1 class="logo_mobile"><a href="index.html"><img src="index/01_header/header_mobile_logo.png"
+                            alt=""></a></h1>
+                <!--menu-->
+                <div class="header_menu">
+                    <ul class="menu navbar_menu">
+                        <li><a href="sub_about.html">ABOUT</a></li>
+                        <li><a href="sub_event.html">EVENT</a></li>
+                        <li><a href="sub_ifclub.html">이프클럽</a></li>
+                    </ul>
+                </div>
+                <!--util-->
+                <nav class="header_util">
+                    <ul class="util_list navbar_icons">
+                        <li class="login"><a href="sub_login.html">로그인</a></li>
+                        <li class="util_my"><a href="sub_login.html"><img src="index/01_header/header_my.png"
+                                    alt=""></a></li>
+                        <li class="util_cart"><a href="sub_login.html"><img src="index/01_header/header_cart.png"
+                                    alt=""></a></li>
+                        <li class="util_find"><a href="javascript:return false;"><img
+                                    src="index/01_header/header_find.png" alt=""></a></li>
+                    </ul>
+                </nav>
+                <a href="javascript:return false;" class="navbar_toggleBtn"><img
+                        src="index/01_header/header_mobile_menu.png" alt=""></a>
+            </div>
+            <!--popup창-->
+            <div id="popup_find">
+                <span class="popup_edge"></span>
+                <!--닫기버튼-->
+                <div class="close">
+                    <button type="button" class="popup_close"></button>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <input type="text" placeholder="검색어를 입력해 주세요.">
+                        <!--확인버튼-->
+                        <input type="submit" value="확인">
+                    </form>
+                </div>
+            </div>
+            <!--popup창 끝-->
+        </div>
+        <!--header_aligner 끝-->
+    </div>
+    <script>
+        const toggleBtn = document.querySelector(".navbar_toggleBtn")
+        const menu = document.querySelector(".navbar_menu")
+        const icons = document.querySelector(".navbar_icons")
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("active")
+            icons.classList.toggle("active")
+        })
+    </script>
+    <!--header_wrap 끝-->
+    <!--header 끝-->
+    <div id="reservation_section">
+        <div class="reservation_story">
+            <h2>체크인</h2>
+            <p>로그인하시면 체크인 목록을 확인하실 수 있습니다.<span><a href="sub_login.html">회원 로그인 하기 ></a></span></p>
+        </div>
+        <div class="reservation_main">
+            <!--항공권 번호-->
+            <div class="number">
+                <p>예약번호 또는 항공권 번호</p>
+                <input type="text" placeholder="예) 123ABC 또는 12345678" name="ID" id="put_id">
+            </div>
+            <!--출발일-->
+            <div class="calendar">
+                <p>출발일</p>
+                <input type="button" id="datepicker" placeholder="탑승일 선택" value="" readonly>
+            </div>
+            <script src="pikaday.js"></script>
+            <script>
+                var picker = new Pikaday({ field: document.getElementById('datepicker') });
+            </script>
+            <!--승객성-->
+            <div class="last_name">
+                <p>승객 성</p>
+                <input type="text" name="last_name" id="name_last">
+            </div>
+            <!--승객 이름-->
+            <div class="first_name">
+                <p>승객 이름</p>
+                <input type="text" name="first_name" id="name_first">
+            </div>
+        </div>
+        <!--예약내용 끝-->
+        <button class="check_button">조회</button>
+    </div>
+    <!--footer-->
+    <div id="footer_wrap">
+        <div class="footer">
+            <div class="footer_inform">
+                <form class="footer_mail" action="">
+                    <input type="text" placeholder="메일을 입력하세요.">
+                    <img src="index/11_footer/banner_direction.png" alt="">
+                </form>
+                <p>이프항공의 특가, 이벤트 등 다양한 소식을 받아볼 수 있도록 구독하세요.</p>
+                <ul class="footer_choice">
+                    <li><a href="javascript:return false;">ABOUT US</a></li>
+                    <li><a href="javascript:return false;">개인정보처리방침</a></li>
+                    <li><a href="javascript:return false;">이용약관</a></li>
+                </ul>
+                <ul class="footer_company">
+                    <div class="accordion">
+                        <li class="footer_name"><span>(주)이프에어</span></li>
+                        <li>대표이사 김은지 외 1명</li>
+                    </div>
+                    <div class="panel">
+                        <li> 사업자등록번호 114-81-12345</li>
+                        <li>통신판매업 신고 제 16-1220</li>
+                        <br>
+                        <li>서울특별시 강서구 공항동 1370</li>
+                        <li>전화 02 2656 1111</li>
+                        <li>FAX 02 2656 2222</li>
+                        <br>
+                        <li>개인정보보호책임자 이덕기 이프항공 부사장</li>
+                    </div>
+                </ul>
+                <span class="copyright">COPYRIGHT 2022 IFAIRLINES CO.LTD.ALL RIGHTS RESERVED.</span>
+            </div>
+            <!--footer_left 끝-->
+            <!--footer_right-->
+            <ul class="sns_right">
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_youtube.png"
+                            onmouseover="this.src='index/11_footer/sns_youtube_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_youtube.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_facebook.png"
+                            onmouseover="this.src='index/11_footer/sns_facebook_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_facebook.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_linkedin.png"
+                            onmouseover="this.src='index/11_footer/sns_linkedin_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_linkedin.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_twitter.png"
+                            onmouseover="this.src='index/11_footer/sns_twitter_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_twitter.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_instagram.png"
+                            onmouseover="this.src='index/11_footer/sns_instagram_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_instagram.png'" alt=""></a></li>
+            </ul>
+            <!--sns끝-->
+        </div>
+    </div>
+    <!--footer 끝-->
+</body>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이프항공</title>
+    <!--favicon-->
+    <link rel="shortcut icon" href="index/favicon.png" sizes="32*32" type="image/png">
+    <!--font_도현체_고운돋움체-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <!--내가 작성한 css-->
+    <link rel="stylesheet" href="css/sub_ifclub_style.css">
+    <!--모바일헤더 css js-->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/df17dcdd6f.js" crossorigin="anonymous"></script>
+    <!--기본js-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!--내가 작성한 js-->
+    <script src="js/sub_script.js"></script>
+</head>
+
+<body>
+    <div id="header_wrap">
+        <!--header-->
+        <div class="header_aligner">
+            <!--language-->
+            <ul class="language">
+                <li><a href="javascript:return false;">한국어</a></li>
+                <li><a href="javascript:return false;">ENGLISH</a></li>
+                <li><a href="javascript:return false;">汉语</a></li>
+            </ul>
+            <!--logo-->
+            <div class="menu_wrap">
+                <h1 class="logo"><a href="index.html"><img src="index/01_header/header_logo.png" alt=""></a></h1>
+                <h1 class="logo_mobile"><a href="index.html"><img src="index/01_header/header_mobile_logo.png"
+                            alt=""></a></h1>
+                <!--menu-->
+                <div class="header_menu">
+                    <ul class="menu navbar_menu">
+                        <li><a href="sub_about.html">ABOUT</a></li>
+                        <li><a href="sub_event.html">EVENT</a></li>
+                        <li><a href="sub_ifclub.html">이프클럽</a></li>
+                    </ul>
+                </div>
+                <!--util-->
+                <nav class="header_util">
+                    <ul class="util_list navbar_icons">
+                        <li class="login"><a href="sub_login.html">로그인</a></li>
+                        <li class="util_my"><a href="sub_login.html"><img src="index/01_header/header_my.png"
+                                    alt=""></a></li>
+                        <li class="util_cart"><a href="sub_login.html"><img src="index/01_header/header_cart.png"
+                                    alt=""></a></li>
+                        <li class="util_find"><a href="javascript:return false;"><img
+                                    src="index/01_header/header_find.png" alt=""></a></li>
+                    </ul>
+                </nav>
+                <a href="javascript:return false;" class="navbar_toggleBtn"><img
+                        src="index/01_header/header_mobile_menu.png" alt=""></a>
+            </div>
+            <!--popup창-->
+            <div id="popup_find">
+                <span class="popup_edge"></span>
+                <!--닫기버튼-->
+                <div class="close">
+                    <button type="button" class="popup_close"></button>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <input type="text" placeholder="검색어를 입력해 주세요.">
+                        <!--확인버튼-->
+                        <input type="submit" value="확인">
+                    </form>
+                </div>
+            </div>
+            <!--popup창 끝-->
+        </div>
+        <!--header_aligner 끝-->
+    </div>
+    <script>
+        const toggleBtn = document.querySelector(".navbar_toggleBtn")
+        const menu = document.querySelector(".navbar_menu")
+        const icons = document.querySelector(".navbar_icons")
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("active")
+            icons.classList.toggle("active")
+        })
+    </script>
+    <!--header_wrap 끝-->
+    <!--header 끝-->
+    <div id="ifclub_menu_wrap">
+        <div class="ifclub_menu">
+            <ul class="menu_choice">
+                <li>
+                    <a href="#introduce_ducky">
+                        캐릭터 소개
+                    </a>
+                </li>
+                <li>
+                    <a href="#if_store_wrap">
+                        IF 스토어
+                    </a>
+                </li>
+                <li>
+                    <a href="#amenity_kit_wrap">
+                        AMENITY KIT
+                    </a>
+                </li>
+                <li>
+                    <a href="#character_product_wrap">
+                        캐릭터 상품
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--menu 끝-->
+    <div id="if_club_wrap">
+        <!--new product-->
+        <div id="new_product">
+            <h2>NEW PRODUCT</h2>
+            <ul class="new_product_list">
+                <li>
+                    <a href="javascript:return false;">
+                        <img src="sub/sub_ifclub/round_cream.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:return false;">
+                        <img src="sub/sub_ifclub/round_candle.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:return false;">
+                        <img src="sub/sub_ifclub/round_rainbow_candle.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--new product 끝-->
+        <!--덕키 소개-->
+        <div id="introduce_ducky">
+            <h1><img src="sub/sub_ifclub/ducky_name.png" alt=""></h1>
+            <div class="ducky_detail">
+                <div class="ducky_name">
+                    <img src="sub/sub_ifclub/cabin_ducky.png" alt="">
+                    <h2>CABIN CREW DUCKY</h2>
+                    <div class="name_detail">
+                        <p>① 오리를 뜻하는 DUCK과 행운의 LUCKY를 합친 DUCKY
+                            <br>
+                            ② 일본어로 '두근두근'을 뜻하는 '도키도키(どきどき)'와 DUCK을 합친 DUCKY
+                        </p>
+                        <br>
+                        <p class="with_ducky">당신의 여행에 행운이 가득하길 바라며 DUCKY가 당신의 안전을 지키겠습니다.
+                            <br> 여행을 시작하는 두근거림. 덕키와 함께 하세요.
+                        </p>
+                    </div>
+                    <!--name_detail 끝-->
+                    <p class="outfit">
+                        뒷모습(엉덩이)를 보이고 있는 오리
+                        <br> 누구보다 빨라서 그 누구도 정면의 모습을 본 적 없다는 전설의 오리
+                        <br>세계 방방곡곡을 돌아다녀 실물을 보기가 쉽지 않다.
+                    </p>
+                    <!--모습 소개-->
+                </div>
+                <!--이름소개 끝 ducky_name-->
+                <div class="ducky_talk">
+                    <img src="sub/sub_ifclub/captain_ducky.png" alt="">
+                    <h2>CAPTAIN DUCKY</h2>
+                    <div class="talk_detail">
+                        <ul>
+                            <li>
+                                우연히 DUCKY를 만난 당신!   
+                            </li>
+                            <li class="red">
+                                YOU ARE A LUCK DUCK!(넌 행운아야!)
+                            </li>
+                            <li class="center">
+                                위급 상황이 되면 나타나 외치는 
+                            </li>
+                            <li class="red center">
+                                DUCK OUT!(도망쳐!)
+                            </li>
+                            <li>
+                                고객여러분의 만족을 위해 어떠한 상황에서도<br>최선의 서비스를 제공하기 위해 노력하는 우리 
+                            </li>
+                            <li class="red">
+                                I GOT MY DUCKS IN A ROW.
+                                <br>(난 만반의 준비를 했어.)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--덕키소개 끝-->
+        <!--if store-->
+        <div id="if_store_wrap">
+            <h2>IF STORE</h2>
+            <img class="store_line" src="sub/sub_ifclub/tag_line.png" alt="">
+            <div class="if_store">
+                <ul class="section1">
+                    <li class="airplane1">
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/airplane1.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">1:200 모형 비행기</p>
+                                <p class="p_price">6.500 마일</p>
+                                <p class="p_inf">유럽의 명품 블록 브랜드 LXX사에서 제작한 비행기모형입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="airplane2">
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/airplane2.png" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">1:100 모형 비행기</p>
+                                <p class="p_price">6.500 마일</p>
+                                <p class="p_inf">유럽의 명품 블록 브랜드 LXX사에서 제작한 비행기모형입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="id_card">
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/ID_Card.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프항공 ID CARD</p>
+                                <p class="p_price">2,000 마일</p>
+                                <p class="p_inf">이프항공의 색깔을 담은 ID CARD 입니다. 컬러풀한 색감의 ID CARD를 경험하세요</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!--section1 끝-->
+                <ul class="section2">
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/tumbler.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 텀블러 710ml <span class="hot">HOT</span>
+                                <span class="exclusive">EXCLUSIVE</span></p>
+                                <p class="p_price">4,500 마일</p>
+                                <p class="sold">
+                                    * 블루 색상 일시품절 되었습니다.
+                                </p>
+                                <p class="p_inf">보온, 보냉 기능이 탁월한 텀블러를 직접 만나보세요.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/wine_tumbler.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 와인 텀블러<span class="hot">HOT</span>
+                                <span class="exclusive">EXCLUSIVE</span></p>
+                                <p class="p_price">3,900 마일</p>
+                                <p class="sold">
+                                    * 블루 색상 일시품절 되었습니다.
+                                </p>
+                                <p class="p_inf">보온, 보냉 기능이 탁월한 스템리스(stemless) 와인텀블러입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/mug_cup.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">[품절] 이프에어 머그<span class="hot">HOT</span>
+                                </p>
+                                <p class="p_price">3,900 마일<span class="sold_out">품절
+                                </span></p>
+                                <p class="sold">
+                                    * 일시품절 되었습니다. 10월 말 재입고 예정입니다.
+                                </p>
+                                <p class="p_inf">사계절 내 책상 위를 지켜줄, 손잡이가 있는 이프에어 머그입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/eco bag.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 에코백<span class="hot">HOT</span></p>
+                                <p class="p_price">4,900 마일</p>
+                                <p class="p_inf">업사이클링 에코 숄더</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!--section2 끝-->
+                <!--section3-->
+                <ul class="section3">
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/candle_yellow.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 캔들 포근한 향</p>
+                                <p class="p_price">3,000 마일</p>
+                                <p class="p_inf">기내의 포근한 느낌을 담은 이프에어의 캔들입니다. </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/candle_blue.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 캔들 시원 향<span class="hot">HOT</span></p>
+                                <p class="p_price">3,000 마일</p>
+                                <p class="p_inf">하늘의 자유로 느낌을 담은 이프에어의 캔들입니다. </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/candle_rainbow.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 아로마 향</p>
+                                <p class="p_price">3,000 마일</p>
+                                <p class="p_inf">피곤을 날려주고, 안정을 찾도록 도와주는 이프에어의 아로마 캔들입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--if store 끝-->
+        </div>
+        <!--if store wrap 끝-->
+        <div id="amenity_kit_wrap">
+            <h2>AMENITY KIT</h2>
+            <img class="store_line" src="sub/sub_ifclub/tag_line.png" alt="">
+            <p class="amenity_inf">기내에서 제공되는 AMENITY KIT를 이제는 마일리지로 구매해 보세요.</p>
+            <div class="amenity_kit">
+                <ul class="section4">
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/earplug.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 귀마개</p>
+                                <p class="p_price">1,500 마일</p>
+                                <p class="p_inf">기내에서 편안하고 조용한 숙면을 취할 수 있도록 제공하는 귀마개입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/cushion.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 쿠션</p>
+                                <p class="p_price">2,500 마일</p>
+                                <p class="p_inf">폭신하고 포근한 이프에어의 덕키 쿠션입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/slipper.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 일회용 실내화</p>
+                                <p class="p_price">1,500 마일</p>
+                                <p class="p_inf">불편한 신발에서 벗어나 발에 편안함을 줄 수 있는 일회용 실내화입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/eyepatch.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 수면 안대</p>
+                                <p class="p_price">2,500 마일</p>
+                                <p class="p_inf">편안한 수면을 취할 수 있도록 빛에서부터 나를 지켜주는 이프에어의 안대 입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="section5">
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/earphone.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 이어폰 + 케이스</p>
+                                <p class="p_price">3,000 마일</p>
+                                <p class="p_inf">영화나 음악을 감상할 수 있도록 기내에서 제공하는 이어폰입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/cream.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">이프에어 보습크림, 수분크림</p>
+                                <p class="p_price">3,000 마일</p>
+                                <p class="p_inf">건조한 기내에서 피부를 보호하기 위한 보습크림과 수분크림입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--amenity kit 끝-->
+        <div id="character_product_wrap">
+            <h2>CHARACTER PRODUCT</h2>
+            <img class="store_line" src="sub/sub_ifclub/tag_line.png" alt="">
+            <div class="character_product">
+                <ul class="section6">
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/captain_note_simple_ver.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">CAPTAIN DUCKY NOTE</p>
+                                <p class="p_price">1,300 마일</p>
+                                <p class="p_inf">CAPTAIN DUCKY가 그려진 노트
+                                   <br> (줄, 모눈, 무지 3가지 종류입니다.)</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/crew_note_simple_ver.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">CABIN DUCKY NOTE</p>
+                                <p class="p_price">1,300 마일</p>
+                                <p class="p_inf">CABIN CREW DUCKY가 그려진 노트
+                                   <br> (줄, 모눈, 무지 3가지 종류입니다.)</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/captain_cabin_simple_ver_yellow.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">DUCKY NOTE YELLOW</p>
+                                <p class="p_price">1,300 마일</p>
+                                <p class="p_inf">DUCKY가 모두 그려진 노트
+                                   <br> (줄, 모눈, 무지 3가지 종류입니다.)</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/captain_crew_simple_ver_blue.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">DUCKY NOTE BLUE</p>
+                                <p class="p_price">1,300 마일</p>
+                                <p class="p_inf">DUCKY가 모두 그려 노트
+                                   <br> (줄, 모눈, 무지 3가지 종류입니다.)</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/captain_note_mini_ver_yellow.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">MINI CAPTAIN DUCKY NOTE</p>
+                                <p class="p_price">1,300 마일</p>
+                                <p class="p_inf">CAPTAIN DUCKY가 그려진 노란 컬러의노트
+                                   <br> (줄, 모눈, 무지 3가지 종류입니다.)</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/captain_note_mini_ver_blue.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">MINI CAPTAIN DUCKY NOTE</p>
+                                <p class="p_price">1,300 마일</p>
+                                <p class="p_inf">CAPTAIN DUCKY가 그려진 블루 컬러의 노트
+                                   <br> (줄, 모눈, 무지 3가지 종류입니다.)</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/cabin_crew_mini_ver_yellow.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">MINI CABIN CREW DUCKY NOTE</p>
+                                <p class="p_price">1,300 마일</p>
+                                <p class="p_inf">CABIN CREW DUCKY가 그려진 노란 컬러의 노트
+                                   <br> (줄, 모눈, 무지 3가지 종류입니다.)</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/cabin_note_mini_ver_blue.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">MINI CABIN CREW DUCKY NOTE</p>
+                                <p class="p_price">1,300 마일</p>
+                                <p class="p_inf">CABIN CREW DUCKY가 그려진 블루 컬러의 노트
+                                   <br> (줄, 모눈, 무지 3가지 종류입니다.)</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!--section6 끝-->
+                <!--section7-->
+                <ul class="section7">
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/pouch1.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">MINI CABIN CREW DUCKY POUCH</p>
+                                <p class="p_price">2,000 마일</p>
+                                <p class="p_inf">CABIN CREW DUCKY가 그려진 블루 컬러의 파우치입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/pouch2.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">MINI CAPTAIN DUCKY POUCH</p>
+                                <p class="p_price">2,000 마일</p>
+                                <p class="p_inf">CAPTAIN DUCKY가 그려진 노란 컬러와 블루 컬러가 섞인 파우치입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/pouch3.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">CABIN CREW CAPTAIN DUCKY POUCH</p>
+                                <p class="p_price">2,000 마일</p>
+                                <p class="p_inf">CABIN CREW DUCKY와 CAPTAIN DUCKY가 그려진 노란 컬러의 파우치입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">
+                            <img src="sub/sub_ifclub/pouch4.jpg" alt="">
+                            <div class="price_inform">
+                                <p class="p_name">CABIN CREW CAPTAIN DUCKY POUCH</p>
+                                <p class="p_price">2,000 마일</p>
+                                <p class="p_inf">CABIN CREW DUCKY와 CAPTAIN DUCKY가 그려진 노란 컬러의 파우치입니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!--background들어간 div-->
+    <!--footer-->
+    <div id="footer_wrap">
+        <div class="footer">
+            <div class="footer_inform">
+                <form class="footer_mail" action="">
+                    <input type="text" placeholder="메일을 입력하세요.">
+                    <img src="index/11_footer/banner_direction.png" alt="">
+                </form>
+                <p>이프항공의 특가, 이벤트 등 다양한 소식을 받아볼 수 있도록 구독하세요.</p>
+                <ul class="footer_choice">
+                    <li><a href="javascript:return false;">ABOUT US</a></li>
+                    <li><a href="javascript:return false;">개인정보처리방침</a></li>
+                    <li><a href="javascript:return false;">이용약관</a></li>
+                </ul>
+                <ul class="footer_company">
+                    <div class="accordion">
+                        <li class="footer_name"><span>(주)이프에어</span></li>
+                        <li>대표이사 김은지 외 1명</li>
+                    </div>
+                    <div class="panel">
+                        <li> 사업자등록번호 114-81-12345</li>
+                        <li>통신판매업 신고 제 16-1220</li>
+                        <br>
+                        <li>서울특별시 강서구 공항동 1370</li>
+                        <li>전화 02 2656 1111</li>
+                        <li>FAX 02 2656 2222</li>
+                        <br>
+                        <li>개인정보보호책임자 이덕기 이프항공 부사장</li>
+                    </div>
+                </ul>
+                <span class="copyright">COPYRIGHT 2022 IFAIRLINES CO.LTD.ALL RIGHTS RESERVED.</span>
+            </div>
+            <!--footer_left 끝-->
+            <!--footer_right-->
+            <ul class="sns_right">
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_youtube.png"
+                            onmouseover="this.src='index/11_footer/sns_youtube_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_youtube.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_facebook.png"
+                            onmouseover="this.src='index/11_footer/sns_facebook_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_facebook.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_linkedin.png"
+                            onmouseover="this.src='index/11_footer/sns_linkedin_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_linkedin.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_twitter.png"
+                            onmouseover="this.src='index/11_footer/sns_twitter_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_twitter.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_instagram.png"
+                            onmouseover="this.src='index/11_footer/sns_instagram_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_instagram.png'" alt=""></a></li>
+            </ul>
+            <!--sns끝-->
+        </div>
+    </div>
+    <!--footer 끝-->
+    <div class="up_btn">
+        <a href="#header_wrap">
+            <img src="index/11_footer/button_up.png" alt="">
+        </a>
+    </div>
+</body>

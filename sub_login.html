@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이프항공</title>
+    <!--favicon-->
+    <link rel="shortcut icon" href="index/favicon.png" sizes="32*32" type="image/png">
+    <!--font_도현체_고운돋움체-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <!--내가 작성한 css-->
+    <link rel="stylesheet" href="css/sub_login_style.css">
+    <!--모바일헤더 css js-->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/df17dcdd6f.js" crossorigin="anonymous"></script>
+    <!--기본js-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!--내가 작성한 js-->
+    <script src="js/sub_script.js"></script>
+</head>
+<body>
+    <div id="header_wrap">
+        <!--header-->
+        <div class="header_aligner">
+            <!--language-->
+            <ul class="language">
+                <li><a href="javascript:return false;">한국어</a></li>
+                <li><a href="javascript:return false;">ENGLISH</a></li>
+                <li><a href="javascript:return false;">汉语</a></li>
+            </ul>
+            <!--logo-->
+            <div class="menu_wrap">
+                <h1 class="logo"><a href="index.html"><img src="index/01_header/header_logo.png" alt=""></a></h1>
+                <h1 class="logo_mobile"><a href="index.html"><img src="index/01_header/header_mobile_logo.png" alt=""></a></h1>
+                <!--menu-->
+                <div class="header_menu">
+                    <ul class="menu navbar_menu">
+                        <li><a href="sub_about.html">ABOUT</a></li>
+                        <li><a href="sub_event.html">EVENT</a></li>
+                        <li><a href="sub_ifclub.html">이프클럽</a></li>
+                    </ul>
+                </div>
+                <!--util-->
+                <nav class="header_util">
+                    <ul class="util_list navbar_icons">
+                        <li class="login"><a href="sub_login.html">로그인</a></li>
+                        <li class="util_my"><a href="sub_login.html"><img src="index/01_header/header_my.png" alt=""></a></li>
+                        <li class="util_cart"><a href="sub_login.html"><img src="index/01_header/header_cart.png" alt=""></a></li>
+                        <li class="util_find"><a href="javascript:return false;"><img src="index/01_header/header_find.png" alt=""></a></li>
+                    </ul>
+                </nav>
+                <a href="javascript:return false;" class="navbar_toggleBtn"><img src="index/01_header/header_mobile_menu.png" alt=""></a>
+            </div>
+            <!--popup창-->
+            <div id="popup_find">
+                <span class="popup_edge"></span>
+                <!--닫기버튼-->
+                <div class="close">
+                    <button type="button" class="popup_close"></button>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <input type="text" placeholder="검색어를 입력해 주세요." class="enter_find">
+                        <!--확인버튼-->
+                        <input type="submit" value="확인">
+                    </form>
+                </div>
+            </div>
+            <!--popup창 끝-->
+        </div>
+        <!--header_aligner 끝-->
+    </div>
+    <script>
+        const toggleBtn = document.querySelector(".navbar_toggleBtn")
+        const menu = document.querySelector(".navbar_menu")
+        const icons = document.querySelector(".navbar_icons")
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("active")
+            icons.classList.toggle("active")
+        })
+    </script>
+    <!--header_wrap 끝-->
+    <!--header 끝-->
+    <!--로그인창-->
+    <div id="login_wrap">
+        <div class="login_enjoy">
+            <div class="login_page">
+                <h2>로그인</h2>
+                <form class="login_inform" action="">
+                    <input type="radio" name="agree" value="no"><label for="no">&nbsp;&nbsp;아이디</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="agree" value="yes" checked="checked"><label for="yes">&nbsp;&nbsp;이프클럽 회원 번호</label>
+                </form>
+                <p>아이디 / 이프클럽 회원 번호 </p>
+                <input type="text" class="enter_id">
+                <p>비밀번호</p>
+                <input type="password">
+                <input type="checkbox">&nbsp;&nbsp; 아이디 저장
+                <button class="login_btn">로그인</button>
+                <ul class="login_find">
+                    <li>
+                        <a href="javascript:return false;">아이디 찾기&nbsp;&nbsp;></a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">비밀번호 찾기&nbsp;&nbsp;></a>
+                    </li>
+                </ul>
+                <h3>---------&nbsp;&nbsp;다음 계정으로 로그인&nbsp;&nbsp;---------</h3>
+                <ul class="login_social">
+                    <li style="background: url(sub/sub_login/login_naver.png) no-repeat center left 20px; ">
+                        <a href="javascript:return false;">네이버</a>
+                    </li>
+                    <li style="background: url(sub/sub_login/login_kakao.png) no-repeat center left 20px; ">
+                        <a href="javascript:return false;">카카오</a>
+                    </li>
+                    <li style="background: url(sub/sub_login/login_google.png) no-repeat center left 20px; ">
+                        <a href="javascript:return false;">구글</a>
+                    </li>
+                    <li style="background: url(sub/sub_login/login_facebook.png) no-repeat center left 20px; ">
+                        <a href="javascript:return false;">페이스북</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="enjoy_btn">회원가입</button>
+        </div>
+    </div>
+    <!--로그인창 끝-->
+    <!--footer-->
+    <div id="footer_wrap">
+        <div class="footer">
+            <div class="footer_inform">
+                <form class="footer_mail" action="">
+                    <input type="text" placeholder="메일을 입력하세요.">
+                    <img src="index/11_footer/banner_direction.png" alt="">
+                </form>
+                <p>이프항공의 특가, 이벤트 등 다양한 소식을 받아볼 수 있도록 구독하세요.</p>
+                <ul class="footer_choice">
+                    <li><a href="javascript:return false;">ABOUT US</a></li>
+                    <li><a href="javascript:return false;">개인정보처리방침</a></li>
+                    <li><a href="javascript:return false;">이용약관</a></li>
+                </ul>
+                <ul class="footer_company">
+                    <div class="accordion">
+                        <li class="footer_name"><span>(주)이프에어</span></li>
+                        <li>대표이사 김은지 외 1명</li>
+                    </div>
+                    <div class="panel">
+                        <li> 사업자등록번호 114-81-12345</li>
+                        <li>통신판매업 신고 제 16-1220</li>
+                        <br>
+                        <li>서울특별시 강서구 공항동 1370</li>
+                        <li>전화 02 2656 1111</li>
+                        <li>FAX 02 2656 2222</li>
+                        <br>
+                        <li>개인정보보호책임자 이덕기 이프항공 부사장</li>
+                    </div>
+                </ul>
+                <span class="copyright">COPYRIGHT 2022 IFAIRLINES CO.LTD.ALL RIGHTS RESERVED.</span>
+            </div>
+            <!--footer_left 끝-->
+            <!--footer_right-->
+            <ul class="sns_right">
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_youtube.png"
+                            onmouseover="this.src='index/11_footer/sns_youtube_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_youtube.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_facebook.png"
+                            onmouseover="this.src='index/11_footer/sns_facebook_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_facebook.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_linkedin.png"
+                            onmouseover="this.src='index/11_footer/sns_linkedin_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_linkedin.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_twitter.png"
+                            onmouseover="this.src='index/11_footer/sns_twitter_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_twitter.png'" alt=""></a></li>
+
+                <li><a href="javascript:return false;"><img src="index/11_footer/sns_instagram.png"
+                            onmouseover="this.src='index/11_footer/sns_instagram_hover.png'"
+                            onmouseout="this.src='index/11_footer/sns_instagram.png'" alt=""></a></li>
+            </ul>
+            <!--sns끝-->
+        </div>
+    </div>
+    <!--footer 끝-->
+</body>
+</html>
