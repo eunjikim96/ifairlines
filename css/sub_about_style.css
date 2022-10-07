@@ -1,0 +1,1092 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: #191919;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #191919;
+}
+
+*[class] {
+    box-sizing: border-box;
+}
+
+/*이사만루체*/
+@font-face {
+    font-family: 'GongGothicLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* header*/
+#header_wrap {
+    border-bottom: 1px solid #ddd;
+}
+
+.header_aligner {
+    margin: 0 auto;
+}
+
+/*header_pc*/
+@media (min-width:1000px) {
+    #header_wrap {
+        width: 100%;
+    }
+
+    .header_aligner {
+        height: 7rem;
+        padding: 0;
+        max-width: 82rem;
+        min-width: 62rem;
+        position: relative;
+    }
+
+    /*language*/
+    .language {
+        padding: 10px 20px 0 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .language li a {
+        display: block;
+        padding-left: 15px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    /*menu_logo*/
+    .menu_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .logo {
+        display: flex;
+        float: left;
+        height: 100%;
+    }
+
+    .logo_mobile {
+        display: none;
+    }
+
+    /*menu_header_menu*/
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu li a {
+        padding: 0 2.5rem;
+        font-family: 'GongGothicLight';
+        font-size: 19px;
+    }
+
+    /*menu_header_util*/
+    .util_list {
+        float: right;
+    }
+
+    .util_list li {
+        float: left;
+    }
+
+    .util_list li a {
+        padding: 0 0.5rem;
+        display: block;
+        font-family: 'GongGothicLight';
+        color: #747B9B;
+    }
+
+    .util_list .login {
+        padding: 10px 5px 0 0;
+    }
+
+    .navbar_toggleBtn {
+        display: none;
+        position: absolute;
+        right: 32px;
+        font-size: 24px;
+    }
+
+    /*popup_find*/
+    #popup_find {
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        background-color: #fff;
+        border: 2px solid #555;
+        border-radius: 0.2rem;
+        padding: 0.2rem 0.5rem 2rem 1.5rem;
+        width: 387px;
+        z-index: 999;
+    }
+
+    .popup_edge {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        background: url(../index/01_header/edge.png) no-repeat;
+        top: -0.5rem;
+        width: 1rem;
+        height: 0.8rem;
+    }
+
+    /*닫기버튼*/
+    .close {
+        text-align: right;
+    }
+
+    button {
+        background-color: #fff;
+        border: 0;
+    }
+
+    .popup_close {
+        width: 2rem;
+        height: 2rem;
+        background: url(../index/01_header/find_close.png) no-repeat 50% 50%;
+    }
+
+    /*검색어를 입력하세요*/
+    input[type="text"] {
+        width: 240px;
+        padding: 5px;
+        display: inline-block;
+        border: none;
+        border-bottom: 1px solid #767676;
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 16px;
+        outline-style: none;
+    }
+
+    input::placeholder {
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 17px;
+    }
+
+    /*확인버튼*/
+    input[type="submit"] {
+        background-color: #747B9B;
+        color: #fff;
+        width: 108px;
+        border-radius: 0.2rem;
+        border: none;
+        padding: 8px 0;
+        margin-left: 10px;
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 16px;
+    }
+    .navbar_toggleBtn{
+        display: none;
+    }
+}
+
+/*header_tablet+mobile*/
+@media (max-width:999px) {
+    .header_menu{
+        width: 100%;
+    }
+    .menu_wrap {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*language*/
+    .language {
+        display: none;
+    }
+
+    /*menu_logo*/
+    .logo {
+        display: none;
+    }
+
+    .logo_mobile {
+        display: block;
+        margin: 12px 0;
+    }
+
+    /*menu_header_menu*/
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+    }
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_menu li a {
+        font-weight: 600;
+        display: block;
+        padding: 20px 0;
+    }
+    .navbar_menu li a:hover{
+        background-color: #747B9B;
+        color: #fff;
+    }
+
+    /*menu_header_util*/
+    .navbar_icons {
+        list-style: none;
+        color: white;
+        padding-left: 0px;
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_icons li {
+        padding: 8px 12px;
+    }
+    .navbar_icons a img:hover {
+        transform: scale(1.1, 1.1);
+    }
+
+    .login,
+    .util_find {
+        display: none;
+    }
+
+    .navbar_toggleBtn {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+}
+
+/*header 끝*/
+
+/*about_banner*/
+#about_banner_wrap{
+    width: 100%; 
+    margin: auto;
+ }
+ .about_banner{
+     width: 100%;
+ }
+ .about_banner h2{
+     font-family: 'GongGothicLight';
+     color: #fff;
+ }
+ 
+ /*pc*/
+ @media (min-width:1000px) {
+     #about_banner_wrap{
+         max-width: 1920px;
+         height: 398px;
+         background: url(../sub/sub_about/about_banner.png) no-repeat center center;
+     }
+     .about_banner{
+         max-width: 1320px;
+         margin: auto;
+         padding: 180px 0 0 30px;
+     }
+     .about_banner h2{
+         font-size: 50px;
+         text-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+         padding-left: 50px;
+     }
+ }
+ 
+ /*tablet*/
+ @media (min-width:700px) and (max-width:999px) {
+     #about_banner_wrap{
+         height: 200px;
+         background: url(../sub/sub_about/about_banner.png) no-repeat bottom right;
+     }
+     .about_banner{
+         padding-top: 90px;
+     }
+     .about_banner h2{
+         font-size: 30px;
+         text-align: center;
+         text-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+     }
+ }
+ 
+ /*mobile*/
+ @media (max-width:699px){
+     #about_banner_wrap{
+         background-color: #50556B;
+     }
+     .about_banner{
+         padding: 20px 0;
+     }
+     .about_banner h2{
+         font-size: 20px;
+         text-align: center;
+     }
+ }
+
+/*본문내용*/
+#section{
+    overflow: hidden;
+    margin: 0 auto;
+}
+/*메뉴*/
+.about_menu{
+    width: 100%;
+    overflow: hidden;
+}
+.about_menu li a{
+    display: block;
+    background-color: #7B99C7;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+.about_menu li a:hover{
+    background-color: #747b9b;
+}
+
+/*메뉴 pc*/
+@media (min-width:1000px) {
+    #section{
+        max-width: 1320px;
+    }
+    .about_menu{
+        margin: 50px 0 75px;
+    }
+    .about_menu li{
+        float: left;
+        width: 33.3%;
+    }
+    .about_menu li a{
+        font-size: 25px;
+        padding: 15px 0;
+        margin: 0 3px;
+    }
+}
+
+
+/*메뉴 tablet*/
+@media (min-width:700px) and (max-width:999px) {
+    #section{
+        width: 100%;
+    }
+    .about_menu{
+        margin: 50px 0 50px;
+    }
+    .about_menu li{
+        float: left;
+        width: 33.3%;
+    }
+    .about_menu li a{
+        font-size: 20px;
+        padding: 10px 0;
+        margin: 0 3px;
+    }
+}
+
+
+/*메뉴 mobile*/
+@media (max-width:699px){
+    #section{
+        width: 100%;
+    }
+    .about_menu{
+        margin: 30px 0 30px;
+    }
+    .about_menu li{
+        width: 100%;
+    }
+    .about_menu li a{
+        font-size: 15px;
+        padding: 5px 0;
+        margin-bottom: 0.7px;
+    }
+}
+
+/*인사말씀*/
+.story_text img{
+    width: 100%;
+}
+.story_text{
+    width: 100%;
+    background-color: #F7F7F7;
+}
+.story_text p{
+    width: 100%;
+    box-sizing: border-box;
+}
+.story_text span{
+    font-weight: 600;
+}
+
+/*pc*/
+@media (min-width:1000px) {
+    #about_story h2{
+        margin-bottom: 40px;
+    }
+    .story_text p{
+        padding: 35px 70px 35px 70px;
+        line-height: 30px;
+    }
+    .story_text span{
+        font-size: 19px;
+    }
+}
+
+
+/*tablet*/
+@media (min-width:700px) and (max-width:999px) {
+    #about_story h2{
+        margin-bottom: 30px;
+        padding-left: 20px;
+    }
+    .story_text p{
+        padding: 35px 40px 35px 40px;
+        line-height: 30px;
+    }
+    .story_text span{
+        font-size: 19px;
+    }
+}
+
+
+/*mobile*/
+@media (max-width:699px){
+    #about_story h2{
+        margin-bottom: 30px;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    .story_text p{
+        padding: 25px 30px 25px 30px;
+        line-height: 20px;
+        font-size: 11px;
+    }
+    .story_text span{
+        font-size: 15px;
+    }
+}
+
+/*기업철학*/
+#about_company table{
+    width: 100%;
+    text-align: center;
+    font-family: 'GongGothicLight';
+    font-size: 22px;
+}
+th{
+    width: 25%;
+}
+td{
+    width: 75%;
+}
+.about_company_mind{
+    width: 100%;
+}
+.about_company_mind li{
+    float: left;
+    width: 19.3%;
+    margin: 0 7%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+.radius_white{
+    background-color: #5D688A;
+    color: #fff;
+}
+.radius_black{
+    background-color: #FCD695;
+}
+
+/*pc*/
+@media (min-width:1000px) {
+    #about_company{
+        margin: 70px 0 100px;
+    }
+    #about_company table{
+        border-collapse: collapse;
+    }
+    .company_title{
+        display: none;
+    }
+    .about_company_mind li{
+        font-size: 23px;
+    }
+    .radius_white{
+        padding: 6% 0;
+        line-height: 30px;
+    }
+    .radius_black{
+        padding: 8% 0;
+    }
+    th, td{
+        border-bottom: 1px solid #D4D4D4;
+        border-top: 1px solid #D4D4D4;
+        padding: 40px 0;
+    }
+}
+
+
+/*tablet*/
+@media (min-width:700px) and (max-width:999px) {
+    #about_company{
+        margin: 70px 0 100px;
+    }
+    #about_company table{
+        border-collapse: collapse;
+        font-size: 18px;
+    }
+    .company_title{
+        display: none;
+    }
+    .radius_white{
+        padding: 6% 0;
+        line-height: 22px;
+        font-size: 16px;
+    }
+    .radius_black{
+        padding: 7% 0;
+        font-size: 18px;
+    }
+    th, td{
+        border-bottom: 1px solid #D4D4D4;
+        border-top: 1px solid #D4D4D4;
+        padding: 40px 0;
+    }
+}
+
+
+/*mobile*/
+@media (max-width:699px){
+    #about_company{
+        margin: 20px 0 60px;
+    }
+    .radius_white{
+        padding: 5% 0;
+        line-height: 18px;
+        font-size: 12px;
+    }
+    .radius_black{
+        padding: 7% 0;
+        font-size: 14px;
+    }
+    .company_style th{
+        display: none;
+    }
+    .company_style td{
+        font-size: 14px;
+    }
+    .company_title{
+        display: block;
+        text-align: left;
+        font-size: 16px;
+    }
+    th{
+        padding: 20px 20px;
+    }
+    td{
+        padding: 10px 0;
+    }
+}
+
+/*about_CI*/
+.about_logo h3{
+    font-family: 'GongGothicLight';
+}
+.symbol{
+    width: 100%;
+    border: 1px solid #707070;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.symbol li{
+    float: left;
+}
+.symbol li img{
+    display: block;
+    margin: auto;
+}
+.about_logo p{
+    padding: 20px 0 0 20px;
+    font-family: 'GongGothicLight';
+}
+
+/*pc*/
+@media (min-width:1000px) {
+    #about_CI{
+        margin-bottom: 100px;
+    }
+    #about_CI h2{
+        font-size: 25px;
+    }
+    .about_logo h3{
+        padding: 40px 0 20px;
+        font-size: 22px;
+    }
+    .about_symbol{
+        width: 25%;
+    }
+    .symbol_logo{
+        width: 50%;
+        padding: 20px 0;
+    }
+    .symbol{
+        padding: 40px 0;
+    }
+}
+
+
+/*tablet*/
+@media (min-width:700px) and (max-width:999px) {
+    #about_CI{
+        margin-bottom: 100px;
+    }
+    #about_CI h2{
+        font-size: 23px;
+        padding-left: 20px;
+    }
+    .about_logo h3{
+        padding: 40px 20px 20px;
+        font-size: 20px;
+    }
+    .about_symbol{
+        width: 50%;
+    }
+    .about_symbol img{
+        width: 30%;
+    }
+    .symbol_logo img{
+        width: 50%;
+    }
+    .symbol_logo{
+        padding: 40px 0 0;
+        width: 100%;
+        margin: auto;
+    }
+    .about_logo p{
+        font-size: 14px;
+        padding: 20px 20px 0;
+    }
+    .symbol{
+        padding: 40px 0;
+    }
+}
+
+
+/*mobile*/
+@media (max-width:699px){
+    #about_CI{
+        margin-bottom: 100px;
+    }
+    #about_CI h2{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    .about_logo h3{
+        padding: 20px 20px 10px 20px;
+        font-size: 15px;
+    }
+    .about_symbol{
+        width: 50%;
+    }
+    .about_symbol img{
+        width: 40%;
+    }
+    .symbol_logo img{
+        width: 60%;
+    }
+    .symbol_logo{
+        padding: 40px 0 0;
+        width: 100%;
+        margin: auto;
+    }
+    .about_logo p{
+        font-size: 11px;
+        line-height: 20px;
+        padding: 20px 20px 0 20px;
+    }
+    .symbol{
+        padding: 30px 0;
+    }
+}
+
+/*캐릭터*/
+.about_character{
+    overflow: hidden;
+}
+.character_img img{
+    margin: auto;
+    width: 100%;
+}
+.character_text p{
+    font-family: 'GongGothicLight';
+}
+.character_text img{
+    display: block;
+    margin: auto;
+}
+.character_text img:hover{
+    transform: scale(1.1, 1.1);
+}
+
+/*pc*/
+@media (min-width:1000px) {
+    .about_character{
+        margin: 100px 0;
+    }
+    .character_img{
+        margin: 60px 0;
+    }
+    .character_text p{
+        float: left;
+        width: 58%;
+        padding-left: 20px;
+    }
+    .character_text a{
+        float: right;
+        width: 40%;
+    }
+}
+
+
+/*tablet*/
+@media (min-width:700px) and (max-width:999px) {
+    .about_character{
+        margin: 60px 0;
+    }
+    .character_img{
+        margin: 60px 30px;
+    }
+    .character_text p{
+        float: left;
+        width: 60%;
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    .character_text a{
+        float: right;
+        width: 30%;
+    }
+}
+
+
+/*mobile*/
+@media (max-width:699px){
+    .about_character{
+        margin: 60px 0;
+    }
+    .character_img{
+        margin: 30px 20px;
+    }
+    .character_text p{
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .character_text img{
+        margin-top: 30px;
+        width: 20%;
+    }
+}
+
+/*footer*/
+#footer_wrap {
+    background-color: #EAEAEB;
+}
+
+/*메일 입력창*/
+.footer_mail {
+    border: 1px solid #929292;
+}
+
+.footer_mail img {
+    vertical-align: middle;
+    float: right;
+    padding: 0 15px 0 15px;
+}
+
+.footer_mail input[type="text"] {
+    background: none;
+    border: none;
+    margin-left: 5px;
+}
+
+/*footer_menu*/
+.footer_choice li a:hover {
+    color: #93a9d1;
+}
+
+.footer_company {
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.footer_company li {
+    float: left;
+    font-family: 'GongGothicLight';
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.footer_name {
+    color: #747B9B;
+    font-weight: bold;
+}
+
+.footer_inform span {
+    display: block;
+}
+/*footer_left 끝*/
+
+/*up button*/
+.up_btn {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    z-index: 50;
+}
+/*pc*/
+@media (min-width:1000px) {
+    #footer_wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .footer {
+        max-width: 1320px;
+        margin: 0 auto;
+        overflow: hidden;
+        background: url(../index/11_footer/footer_logo.png) no-repeat right 20px bottom 80px;
+        padding: 40px 0 40px;
+    }
+    .footer_inform {
+        display: block;
+        float: left;
+    }
+    /*메일창*/
+    .footer_mail {
+        width: 90%;
+        padding: 3px 0 3px 2px;
+        margin-left: 10px;
+    }
+    .footer_mail input[type="text"] {
+        width: 80%;
+    }
+    .footer_inform p {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 30px 0 20px;
+    }
+    .footer_choice,
+    .footer_inform p {
+        padding-left: 10px;
+    }
+    .footer_choice li {
+        float: left;
+        padding-right: 30px;
+        font-weight: 600;
+    }
+    .footer_company img{
+        display: none;
+    }
+    /*footer_right sns*/
+    .sns_right {
+        float: right;
+    }
+
+    .sns_right li {
+        float: left;
+        padding: 0 10px;
+    }
+    .copyright{
+        padding-left: 10px;
+    }
+}
+
+
+/*tablet*/
+@media (min-width:700px) and (max-width:999px) {
+    #footer_wrap {
+        width: 100%;
+        overflow: hidden;
+        background-color: #EAEAEB;
+    }
+    .footer {
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 40px 0;
+    }
+    .footer_inform {
+        display: block;
+    }
+    /*메일창*/
+    .footer_mail {
+        width: 90%;
+        margin: auto;
+        padding: 5px 0 5px 2px;
+    }
+    .footer_mail input[type="text"] {
+        width: 75%;
+    }
+    .footer_inform p {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 20px 0 30px;
+        text-align: center;
+    }
+    .footer_choice{
+        width: 100%;
+    }
+    .footer_choice li{
+        float: left;
+        width: 33.3%;
+        text-align: center;
+    }
+    .footer_choice li a{
+        font-weight: 600;
+    }
+    .footer_company{
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+        background: url(../index/11_footer/footer_direction_bottom.png) no-repeat right 60px top 30px;
+        margin-top: 30px;
+    }
+    .accordion{
+        display: block;
+        cursor: pointer;
+        margin: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    .panel{
+        max-height:0;
+        overflow:hidden;
+        transition:max-height	0.3s	ease-out;
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+    span.copyright{
+        display: none;
+    }
+    /*footer_right sns*/
+    .sns_right {
+        width: 60%;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .sns_right li {
+        float: left;
+        width: 20%;
+    }
+}
+
+
+/*mobile*/
+@media (max-width:699px){
+    #footer_wrap {
+        width: 100%;
+        overflow: hidden;
+        background-color: #EAEAEB;
+    }
+    .footer {
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 40px 0;
+    }
+    .footer_inform {
+        display: block;
+    }
+    /*메일창*/
+    .footer_mail {
+        width: 90%;
+        margin: auto;
+        padding: 5px 0 5px 2px;
+    }
+    .footer_mail input[type="text"] {
+        width: 75%;
+        padding: 5px 0;
+    }
+    .footer_inform p {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 20px 0 30px;
+        text-align: center;
+    }
+    .footer_choice{
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .footer_choice li{
+        float: left;
+        width: 33.3%;
+        text-align: center;
+    }
+    .footer_choice li a{
+        font-weight: 600;
+    }
+    .footer_company{
+        width: 100%;
+        text-align: center;
+        background: url(../index/11_footer/footer_direction_bottom.png) no-repeat right 60px top 30px;
+    }
+    .accordion{
+        display: block;
+        cursor: pointer;
+        margin: auto;
+        width: 50%;
+    }
+    .panel{
+        max-height:0;
+        overflow:hidden;
+        transition:max-height	0.3s	ease-out;
+        width: 100%;
+        margin: auto;
+        padding-top: 10px;
+        text-align: center;
+    }
+    span.copyright{
+        display: none;
+    }
+    /*footer_right sns*/
+    .sns_right {
+        width: 60%;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .sns_right li {
+        float: left;
+        width: 20%;
+    }
+}

@@ -1,0 +1,1067 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: #191919;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #191919;
+}
+
+*[class] {
+    box-sizing: border-box;
+}
+
+/*이사만루체*/
+@font-face {
+    font-family: 'GongGothicLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* header*/
+#header_wrap {
+    border-bottom: 1px solid #ddd;
+}
+
+.header_aligner {
+    margin: 0 auto;
+}
+
+/*header_pc*/
+@media (min-width:1000px) {
+    #header_wrap {
+        width: 100%;
+    }
+
+    .header_aligner {
+        height: 7rem;
+        padding: 0;
+        max-width: 82rem;
+        min-width: 62rem;
+        position: relative;
+    }
+
+    /*language*/
+    .language {
+        padding: 10px 20px 0 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .language li a {
+        display: block;
+        padding-left: 15px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    /*menu_logo*/
+    .menu_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .logo {
+        display: flex;
+        float: left;
+        height: 100%;
+    }
+
+    .logo_mobile {
+        display: none;
+    }
+
+    /*menu_header_menu*/
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu li a {
+        padding: 0 2.5rem;
+        font-family: 'GongGothicLight';
+        font-size: 19px;
+    }
+
+    /*menu_header_util*/
+    .util_list {
+        float: right;
+    }
+
+    .util_list li {
+        float: left;
+    }
+
+    .util_list li a {
+        padding: 0 0.5rem;
+        display: block;
+        font-family: 'GongGothicLight';
+        color: #747B9B;
+    }
+
+    .util_list .login {
+        padding: 10px 5px 0 0;
+    }
+
+    .navbar_toggleBtn {
+        display: none;
+        position: absolute;
+        right: 32px;
+        font-size: 24px;
+    }
+
+    /*popup_find*/
+    #popup_find {
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        background-color: #fff;
+        border: 2px solid #555;
+        border-radius: 0.2rem;
+        padding: 0.2rem 0.5rem 2rem 1.5rem;
+        width: 387px;
+        z-index: 999;
+    }
+
+    .popup_edge {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        background: url(../index/01_header/edge.png) no-repeat;
+        top: -0.5rem;
+        width: 1rem;
+        height: 0.8rem;
+    }
+
+    /*닫기버튼*/
+    .close {
+        text-align: right;
+    }
+
+    button {
+        background-color: #fff;
+        border: 0;
+    }
+
+    .popup_close {
+        width: 2rem;
+        height: 2rem;
+        background: url(../index/01_header/find_close.png) no-repeat 50% 50%;
+    }
+
+    /*검색어를 입력하세요*/
+    input[type="text"] {
+        width: 240px;
+        padding: 5px;
+        display: inline-block;
+        border: none;
+        border-bottom: 1px solid #767676;
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 16px;
+        outline-style: none;
+    }
+
+    input::placeholder {
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 17px;
+    }
+
+    /*확인버튼*/
+    input[type="submit"] {
+        background-color: #747B9B;
+        color: #fff;
+        width: 108px;
+        border-radius: 0.2rem;
+        border: none;
+        padding: 8px 0;
+        margin-left: 10px;
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 16px;
+    }
+
+    .navbar_toggleBtn {
+        display: none;
+    }
+}
+
+/*header_tablet+mobile*/
+@media (max-width:999px) {
+    .header_menu {
+        width: 100%;
+    }
+
+    .menu_wrap {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*language*/
+    .language {
+        display: none;
+    }
+
+    /*menu_logo*/
+    .logo {
+        display: none;
+    }
+
+    .logo_mobile {
+        display: block;
+        margin: 12px 0;
+    }
+
+    /*menu_header_menu*/
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+    }
+
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_menu li a {
+        font-weight: 600;
+        display: block;
+        padding: 20px 0;
+    }
+
+    .navbar_menu li a:hover {
+        background-color: #747B9B;
+        color: #fff;
+    }
+
+    /*menu_header_util*/
+    .navbar_icons {
+        list-style: none;
+        color: white;
+        padding-left: 0px;
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar_icons li {
+        padding: 8px 12px;
+    }
+
+    .navbar_icons a img:hover {
+        transform: scale(1.1, 1.1);
+    }
+
+    .login,
+    .util_find {
+        display: none;
+    }
+
+    .navbar_toggleBtn {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+}
+
+/*header 끝*/
+
+#schedule_wrap {
+    margin: 0 auto;
+}
+
+.schedule_header {
+    margin: 0 0 25px;
+}
+
+.schedule_header h2 {
+    margin-bottom: 20px;
+    font-size: 31px;
+}
+
+.schedule_header p {
+    font-family: 'GongGothicLight';
+}
+
+/*왕복/편도*/
+.quickbooking_tab {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'GongGothicLight';
+}
+
+#box1 {
+    display: inline-block;
+}
+
+#box1>li {
+    float: left;
+    text-align: center;
+    width: 50%;
+    border: 1px solid #707070;
+    border-radius: 3px;
+}
+
+.tap {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tap:hover {
+    background-color: #747b9b;
+    color: #fff;
+}
+
+.opacity {
+    background-color: #747b9b;
+    border: 1px solid #707070;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#box1>li>.box1_1 {
+    height: 0;
+    overflow: hidden;
+}
+
+.box1_1 {
+    width: 100%;
+    text-align: left;
+    padding-top: 15px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*체크박스*/
+.trip_choice input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.trip_choice input[type="radio"] label {
+    vertical-align: middle;
+}
+
+/*스케줄 내용*/
+.schedule_section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.location {
+    border: 1px solid #707070;
+    border-radius: 3px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-top: 5px solid #93a9d1;
+}
+
+.location ul {
+    margin: auto;
+    overflow: hidden;
+}
+
+.location ul li {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.location ul li button {
+    border: none;
+    background-color: #fff;
+    font-family: 'GongGothicLight';
+}
+
+.location ul li button h2 {
+    font-size: 24px;
+}
+
+.location ul li button p {
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+button,
+select {
+    cursor: pointer;
+}
+
+.wrap_btn img:hover {
+    animation: swap 0.3s linear 1;
+    cursor: not-allowed;
+}
+
+.wrap_btn img:not(:hover) {
+    animation: swap2 0.3s linear 1;
+}
+
+@keyframes swap {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes swap2 {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*달력*/
+.calendar {
+    border: 1px solid #707070;
+    border-radius: 3px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-top: 5px solid #f9dfa8;
+}
+
+#datepicker{
+    border: none;
+    background-color: #fff;
+    font-family: 'GongGothicLight';
+    width: 50%;
+    margin: 0 25%;
+    vertical-align: middle;
+}
+#datepicker_range {
+    border: none;
+    background-color: #fff;
+    font-family: 'GongGothicLight';
+    width: 70%;
+    margin: 0 15%;
+    vertical-align: middle;
+}
+
+.check_button {
+    margin: 0 auto;
+    font-family: 'GongGothicLight';
+    border-radius: 5px;
+    border: none;
+    background-color: #747B9B;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+}
+
+/*pc*/
+@media (min-width:1000px) {
+    #schedule_wrap {
+        max-width: 1320px;
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
+
+    .schedule_header {
+        margin: 60px 0 25px;
+    }
+
+    .schedule_header h2 {
+        margin-bottom: 25px;
+        font-size: 31px;
+    }
+
+    .schedule_header p {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    /*왕복/편도*/
+    .quickbooking_tab {
+        margin-top: 10px;
+    }
+
+    #box1 {
+        width: 400px;
+        float: left;
+    }
+
+    #box1>li {
+        height: 50px;
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+    #box1>li>.box1_1 {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .important {
+        font-size: 14px;
+        margin: 30px 0;
+    }
+
+    /*체크박스*/
+    .trip_choice {
+        margin-bottom: 25px;
+    }
+
+    /*스케줄 내용*/
+    .location {
+        width: 65%;
+        height: 140px;
+        padding: 42px 30px;
+        float: left;
+    }
+    .location ul {
+        width: 64%;
+    }
+    .location ul li button h2 {
+        font-size: 24px;
+    }
+
+    .location ul li button p {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    /*달력*/
+    .calendar {
+        width: 35%;
+        height: 140px;
+        padding: 50px 0;
+        float: left;
+        background: url(../sub/sub_schedule/schedule_paper.png) no-repeat top 50% left 7%;
+    }
+
+    #datepicker {
+        font-size: 17px;
+        height: 40px;
+    }
+    #datepicker_range{
+        font-size: 15px;
+        height: 40px;
+    }
+
+    .check_button {
+        width: 180px;
+        padding: 15px 0;
+        font-size: 18px;
+        margin-top: 40px;
+    }
+}
+
+
+/*tablet*/
+@media (min-width:700px) and (max-width:999px) {
+    #schedule_wrap {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 100px;
+        box-sizing: border-box;
+    }
+
+    .schedule_header {
+        margin: 40px 0 15px;
+    }
+
+    .schedule_header h2 {
+        margin-bottom: 25px;
+        font-size: 25px;
+    }
+
+    .schedule_header p {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    /*왕복/편도*/
+    .quickbooking_tab {
+        margin-top: 10px;
+    }
+
+    #box1 {
+        width: 300px;
+        float: left;
+    }
+
+    #box1>li {
+        width: 50%;
+        height: 40px;
+        padding: 8px 0;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+
+    #box1>li>.box1_1 {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .important {
+        width: 100%;
+        font-size: 14px;
+        margin: 15px 0 20px;
+    }
+
+    /*체크박스*/
+    .trip_choice {
+        margin-bottom: 20px;
+    }
+
+    /*스케줄 내용*/
+    .location {
+        width: 65%;
+        height: 120px;
+        padding: 33px 30px;
+        float: left;
+    }
+    .location ul {
+        width: 64%;
+    }
+    .location ul li button h2 {
+        font-size: 20px;
+    }
+
+    .location ul li button p {
+        font-size: 13px;
+        padding-top: 10px;
+    }
+
+    /*달력*/
+    .calendar {
+        width: 35%;
+        height: 120px;
+        padding: 38px 0;
+        float: left;
+        background: url(../sub/sub_schedule/schedule_paper.png) no-repeat top 50% left 5%;
+    }
+
+    #datepicker {
+        font-size: 17px;
+        height: 40px;
+    }
+    #datepicker_range {
+        font-size: 13px;
+        height: 40px;
+    }
+
+    .check_button {
+        width: 160px;
+        padding: 12px 0;
+        font-size: 16px;
+        margin-top: 40px;
+    }
+}
+
+
+/*mobile*/
+@media (max-width:699px) {
+    #schedule_wrap {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+    }
+
+    .schedule_header {
+        margin: 20px 0 15px;
+    }
+
+    .schedule_header h2 {
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+
+    .schedule_header p {
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    /*왕복/편도*/
+    .quickbooking_tab {
+        margin-top: 10px;
+    }
+
+    #box1 {
+        width: 100%;
+    }
+
+    #box1>li {
+        width: 100%;
+        height: 40px;
+        padding: 8px 0;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+
+    #box1>li>.box1_1 {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .important {
+        width: 100%;
+        font-size: 10px;
+        margin: 5px 0 15px;
+        line-height: 18px;
+    }
+
+    /*체크박스*/
+    .trip_choice {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    /*스케줄 내용*/
+    .location {
+        width: 100%;
+        height: 120px;
+        padding: 33px 15px;
+        float: left;
+    }
+    .location ul {
+        width: 100%;
+    }
+    .location ul li button h2 {
+        font-size: 18px;
+    }
+
+    .location ul li button p {
+        font-size: 13px;
+        padding-top: 10px;
+    }
+    .wrap_btn img{
+        width: 80%;
+    }
+    .wrap_btn{
+        padding-top: 5px;
+    }
+
+    /*달력*/
+    .calendar {
+        width: 100%;
+        height: 80px;
+        padding: 22px 0;
+        float: left;
+        background: url(../sub/sub_schedule/schedule_paper.png) no-repeat top 50% left 6%;
+    }
+
+    #datepicker {
+        font-size: 15px;
+        height: 30px;
+    }
+    #datepicker_range {
+        font-size: 12px;
+        height: 30px;
+    }
+
+    .check_button {
+        width: 130px;
+        padding: 12px 0;
+        font-size: 14px;
+        margin-top: 40px;
+    }
+}
+
+/*footer*/
+#footer_wrap {
+    background-color: #EAEAEB;
+}
+
+/*메일 입력창*/
+.footer_mail {
+    border: 1px solid #929292;
+}
+
+.footer_mail img {
+    vertical-align: middle;
+    float: right;
+    padding: 0 15px 0 15px;
+}
+
+.footer_mail input[type="text"] {
+    background: none;
+    border: none;
+    margin-left: 5px;
+}
+
+/*footer_menu*/
+.footer_choice li a:hover {
+    color: #93a9d1;
+}
+
+.footer_company {
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.footer_company li {
+    float: left;
+    font-family: 'GongGothicLight';
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.footer_name {
+    color: #747B9B;
+    font-weight: bold;
+}
+
+.footer_inform span {
+    display: block;
+}
+/*footer_left 끝*/
+
+/*pc*/
+@media (min-width:1000px) {
+    #footer_wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .footer {
+        max-width: 1320px;
+        margin: 0 auto;
+        overflow: hidden;
+        background: url(../index/11_footer/footer_logo.png) no-repeat right 20px bottom 80px;
+        padding: 40px 0 40px;
+    }
+    .footer_inform {
+        display: block;
+        float: left;
+    }
+    /*메일창*/
+    .footer_mail {
+        width: 90%;
+        padding: 3px 0 3px 2px;
+        margin-left: 10px;
+    }
+    .footer_mail input[type="text"] {
+        width: 80%;
+    }
+    .footer_inform p {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 30px 0 20px;
+    }
+    .footer_choice,
+    .footer_inform p {
+        padding-left: 10px;
+    }
+    .footer_choice li {
+        float: left;
+        padding-right: 30px;
+        font-weight: 600;
+    }
+    .footer_company img{
+        display: none;
+    }
+    /*footer_right sns*/
+    .sns_right {
+        float: right;
+    }
+
+    .sns_right li {
+        float: left;
+        padding: 0 10px;
+    }
+    .copyright{
+        padding-left: 10px;
+    }
+}
+
+
+/*tablet*/
+@media (min-width:700px) and (max-width:999px) {
+    #footer_wrap {
+        width: 100%;
+        overflow: hidden;
+        background-color: #EAEAEB;
+    }
+    .footer {
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 40px 0;
+    }
+    .footer_inform {
+        display: block;
+    }
+    /*메일창*/
+    .footer_mail {
+        width: 90%;
+        margin: auto;
+        padding: 5px 0 5px 2px;
+    }
+    .footer_mail input[type="text"] {
+        width: 75%;
+    }
+    .footer_inform p {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 20px 0 30px;
+        text-align: center;
+    }
+    .footer_choice{
+        width: 100%;
+    }
+    .footer_choice li{
+        float: left;
+        width: 33.3%;
+        text-align: center;
+    }
+    .footer_choice li a{
+        font-weight: 600;
+    }
+    .footer_company{
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+        background: url(../index/11_footer/footer_direction_bottom.png) no-repeat right 60px top 30px;
+        margin-top: 30px;
+    }
+    .accordion{
+        display: block;
+        cursor: pointer;
+        margin: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    .panel{
+        max-height:0;
+        overflow:hidden;
+        transition:max-height	0.3s	ease-out;
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+    span.copyright{
+        display: none;
+    }
+    /*footer_right sns*/
+    .sns_right {
+        width: 60%;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .sns_right li {
+        float: left;
+        width: 20%;
+    }
+}
+
+
+/*mobile*/
+@media (max-width:699px){
+    #footer_wrap {
+        width: 100%;
+        overflow: hidden;
+        background-color: #EAEAEB;
+    }
+    .footer {
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 40px 0;
+    }
+    .footer_inform {
+        display: block;
+    }
+    /*메일창*/
+    .footer_mail {
+        width: 90%;
+        margin: auto;
+        padding: 5px 0 5px 2px;
+    }
+    .footer_mail input[type="text"] {
+        width: 75%;
+        padding: 5px 0;
+    }
+    .footer_inform p {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 20px 0 30px;
+        text-align: center;
+    }
+    .footer_choice{
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .footer_choice li{
+        float: left;
+        width: 33.3%;
+        text-align: center;
+    }
+    .footer_choice li a{
+        font-weight: 600;
+    }
+    .footer_company{
+        width: 100%;
+        text-align: center;
+        background: url(../index/11_footer/footer_direction_bottom.png) no-repeat right 60px top 30px;
+    }
+    .accordion{
+        display: block;
+        cursor: pointer;
+        margin: auto;
+        width: 50%;
+    }
+    .panel{
+        max-height:0;
+        overflow:hidden;
+        transition:max-height	0.3s	ease-out;
+        width: 100%;
+        margin: auto;
+        padding-top: 10px;
+        text-align: center;
+    }
+    span.copyright{
+        display: none;
+    }
+    /*footer_right sns*/
+    .sns_right {
+        width: 60%;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .sns_right li {
+        float: left;
+        width: 20%;
+    }
+}
